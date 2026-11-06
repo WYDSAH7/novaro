@@ -309,7 +309,7 @@
             margin: 0;
         }
 
-        /* Visual Gallery Section (Smart Crops + Diagrams) */
+        /* Visual Gallery Section */
         .gallery-section {
             background: linear-gradient(180deg, var(--lavender-soft) 0%, var(--lavender-mist) 100%);
             padding: 6rem 6%;
@@ -357,7 +357,6 @@
             transform: scale(1.05);
         }
 
-        /* Smart focal crops of Toilet photo.jpg */
         .crop-lifestyle {
             object-position: 18% 50%;
         }
@@ -537,7 +536,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.8rem;
-            margin-bottom: 3.5rem;
         }
 
         .manual-card {
@@ -578,24 +576,6 @@
 
         .manual-card li {
             margin-bottom: 0.45rem;
-        }
-
-        .video-showcase {
-            background: var(--twilight);
-            border: 1px solid var(--border-lavender);
-            border-radius: 12px;
-            padding: 2.5rem;
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .video-showcase video {
-            width: 100%;
-            border-radius: 8px;
-            background: #000;
-            border: 1px solid rgba(255,255,255,0.15);
         }
 
         /* WaterMark Compliance Banner */
@@ -718,7 +698,7 @@
         }
 
         @media (max-width: 920px) {
-            .hero, .tab-content.active, .compliance-container, .video-showcase, .form-grid {
+            .hero, .tab-content.active, .compliance-container, .form-grid {
                 grid-template-columns: 1fr;
             }
             .hero h1 {
@@ -998,13 +978,13 @@
         </div>
     </section>
 
-    <!-- BUILDER & PLUMBER RESOURCE HUB: MANUALS, WATER TANK INSTRUCTIONS & VIDEO -->
+    <!-- BUILDER & PLUMBER RESOURCE HUB: MANUALS & WATER TANK INSTRUCTIONS -->
     <section class="manuals-section" id="manuals">
         <div class="manuals-container">
             <div class="section-header">
                 <span class="section-tag" style="background:rgba(155,135,245,0.18); color:var(--lavender-bright);">Trade & Installer Hub</span>
                 <h2 style="color: var(--white);">Manuals & Water Tank Instructions</h2>
-                <p style="color: var(--text-light);">Everything your plumber, electrician, and site manager need on site—from rough-in frame dimensions to user manuals and 3D video guides.</p>
+                <p style="color: var(--text-light);">Everything your plumber, electrician, and site manager need on site—from rough-in frame dimensions to user manuals and compliance documents.</p>
             </div>
 
             <div class="manuals-grid">
@@ -1053,21 +1033,6 @@
                         <a href="WaterMark-WMK040285.pdf" target="_blank" class="btn-primary" style="text-align:center;">Download WaterMark Certificate</a>
                         <a href="T3.pdf" target="_blank" class="btn-secondary" style="text-align:center; padding:0.7rem;">Download T3 Spec Brochure</a>
                     </div>
-                </div>
-            </div>
-
-            <!-- 3D Installation Video Player -->
-            <div class="video-showcase">
-                <div>
-                    <span class="section-tag" style="background:rgba(229,193,133,0.15); color:var(--champagne); border-color:var(--champagne);">Step-by-Step Visual Guide</span>
-                    <h3 style="font-size: 2.2rem; margin: 0.5rem 0 1rem; color: var(--white);">Watch the 3D Concealed Cistern & Pan Installation</h3>
-                    <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.2rem;">Walks your installer through calibrating the 320mm water outlet height, reserving the 600mm+ wall slot, positioning the power socket (50cm offset, 40–60cm height), tiling, connecting the air and foot-sensor cables, and fitting the dual-flush plate.</p>
-                </div>
-                <div>
-                    <video controls preload="metadata">
-                        <source src="Installation video insturction.mp4" type="video/mp4">
-                        Your browser does not support embedded videos.
-                    </video>
                 </div>
             </div>
         </div>
