@@ -3,112 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Novaro | The Future of Smart Bathrooms</title>
+    <title>Novaro | The T3 Wall-Hung Smart Toilet</title>
     <style>
         :root {
-            --primary-color: #0f172a;
-            --accent-color: #38bdf8;
-            --text-main: #334155;
-            --bg-light: #f8fafc;
+            --primary: #000000;
+            --accent: #38bdf8;
+            --surface: #f8fafc;
+            --text: #334155;
+            --text-light: #64748b;
         }
         body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: var(--text);
+            background: #ffffff;
             line-height: 1.6;
         }
         header {
-            background-color: white;
-            padding: 1.5rem 10%;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 1px solid #f1f5f9;
         }
         .logo {
             font-size: 1.5rem;
             font-weight: 800;
-            color: var(--primary-color);
-            letter-spacing: -0.5px;
+            color: var(--primary);
+            letter-spacing: -1px;
         }
-        .logo span {
-            color: var(--accent-color);
+        .cert-badge {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #16a34a;
+            border: 1px solid #16a34a;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
         }
         .hero {
             text-align: center;
-            padding: 6rem 2rem;
-            background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+            padding: 6rem 2rem 4rem;
+            background: linear-gradient(to bottom, #ffffff, var(--surface));
         }
         .hero h1 {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin: 0 0 1rem 0;
+            line-height: 1.1;
         }
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
+            color: var(--text-light);
             max-width: 600px;
-            margin: 0 auto 2rem auto;
-            color: #64748b;
+            margin: 0 auto 2rem;
         }
-        .cta-button {
-            background-color: var(--primary-color);
+        .grid-section {
+            padding: 5rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .feature {
+            background: var(--surface);
+            padding: 2.5rem;
+            border-radius: 12px;
+        }
+        .feature h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+        .specs {
+            background: var(--primary);
             color: white;
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: background 0.3s ease;
+            padding: 5rem 5%;
         }
-        .cta-button:hover {
-            background-color: var(--accent-color);
+        .specs-container {
+            max-width: 800px;
+            margin: 0 auto;
         }
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem;
-            padding: 4rem 2rem;
+        .specs h2 {
+            font-size: 2.5rem;
+            margin-top: 0;
         }
-        .feature-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            width: 250px;
+        .spec-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .spec-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .cta-section {
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            padding: 6rem 2rem;
         }
-        .feature-card h3 {
-            color: var(--primary-color);
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 3rem;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 4px;
+            font-size: 1.1rem;
+            transition: background 0.3s;
         }
+        .btn:hover { background: #333333; }
         footer {
             text-align: center;
             padding: 2rem;
-            background-color: var(--primary-color);
-            color: white;
+            border-top: 1px solid #f1f5f9;
+            color: var(--text-light);
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">Novaro<span>.</span></div>
+        <div class="logo">Novaro.</div>
+        <div class="cert-badge">✓ WaterMark Certified</div>
     </header>
 
-    <div class="hero">
-        <h1>Intelligent Comfort.</h1>
-        <p>We are redefining the Australian bathroom experience with premium, state-of-the-art smart toilets. Our full collection is launching very soon.</p>
-        <a href="#contact" class="cta-button">Join the Waitlist</a>
-    </div>
+    <section class="hero">
+        <h1>The Novaro T3.</h1>
+        <p>A masterpiece of wall-hung engineering. Featuring a concealed 400kg steel frame, 100% touchless technology, and clinical UV sterilization.</p>
+        <a href="#inquire" class="btn">Request a Quote</a>
+    </section>
 
-    <div class="features">
-        <div class="feature-card">
-            <h3>Heated Seating</h3>
-            <p>Adjustable temperature profiles for year-round comfort.</p>
+    <section class="grid-section">
+        <div class="feature">
+            <h3>Zero Contact. Pure Hygiene.</h3>
+            <p>Advanced wave sensors automatically open the lid as you approach. Foot-touch flushing and voice control mean you never have to touch a surface.</p>
         </div>
-        <div class="feature-card">
-            <h3>Touchless Flush</h3>
-            <p>Advanced proximity sensors for a completely hygienic experience.</p>
+        <div class="feature">
+            <h3>Architectural Wall-Hung Design</h3>
+            <p>Maximize your bathroom footprint. The wall-hung aesthetic keeps floors completely clear, allowing robot vacuums to clean effortlessly underneath.</p>
         </div>
-        <div class="feature-card">
-            <h3>Eco-
+        <div class="feature">
+            <h3>Clinical-Grade Cleansing</h3>
+            <p>Equipped with an instant-heating bidet, adjustable warm air drying, double water filtration, and automatic UV sterilization for the ceramic nozzle.</p>
+        </div>
+    </section>
+
+    <section class="specs">
+        <div class="specs-container">
+            <h2>Technical Specifications</h2>
+            <ul class="spec-list">
+                <li><strong>Dimensions:</strong> 580 x 400 x 420mm</li>
+                <li><strong>Compliance:</strong> WaterMark (WMK040285)</li>
+                <li><strong>Load Bearing:</strong> 400kg Steel Frame</li>
+                <li><strong>Display:</strong> Integrated Digital Screen</li>
+                <li><strong>Heating:</strong> Instant Water & Seat Heating</li>
+                <li><strong>Smart Control:</strong> App & Voice Compatible</li>
+                <li><strong>Material:</strong> Flame Retardant & Anti-fouling Glaze</li>
+                <li><strong>Safety:</strong> 12V System & Leakage Protection</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="cta-section" id="inquire">
+        <h2>Ready for your next commercial build?</h2>
+        <p style="margin-bottom: 2rem;">Contact us today for wholesale pricing and spec sheets.</p>
+        <a href="mailto:hello@novarosmart.com" class="btn">Email Sales Team</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Novaro Smart Bathrooms Australia. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
