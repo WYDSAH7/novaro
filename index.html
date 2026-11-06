@@ -3,22 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOVARO | Architectural Smart Bathrooms Australia</title>
+    <title>NOVARO | Smart Bathrooms for Modern Australian Builds</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --obsidian: #0b0c10;
-            --charcoal: #14161d;
-            --gold: #c5a059;
-            --gold-light: #dfc286;
-            --stone: #f6f4f0;
+            --midnight: #13111c;
+            --twilight: #1d192b;
+            --lavender: #9b87f5;
+            --lavender-bright: #b8a9ff;
+            --lavender-deep: #7c66dc;
+            --lavender-soft: #f3f0ff;
+            --lavender-mist: #faf9fe;
+            --champagne: #e5c185;
+            --mint: #34d399;
             --white: #ffffff;
-            --text-dark: #1e2028;
-            --text-muted: #6e717a;
-            --text-light: #d1d5db;
-            --border-subtle: rgba(197, 160, 89, 0.25);
+            --text-dark: #191724;
+            --text-muted: #625f73;
+            --text-light: #dcd7ed;
+            --border-lavender: rgba(155, 135, 245, 0.28);
         }
 
         * {
@@ -29,9 +33,9 @@
         body {
             margin: 0;
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            background-color: var(--stone);
+            background-color: var(--lavender-mist);
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
         h1, h2, h3, .serif {
@@ -39,18 +43,18 @@
             font-weight: 600;
         }
 
-        /* Navigation */
+        /* Header & Navigation */
         header {
-            background-color: rgba(11, 12, 16, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.2rem 6%;
+            background: rgba(19, 17, 28, 0.94);
+            backdrop-filter: blur(14px);
+            padding: 1.1rem 6%;
             position: sticky;
             top: 0;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-lavender);
         }
 
         .logo {
@@ -64,12 +68,12 @@
         }
 
         .logo span {
-            color: var(--gold);
+            color: var(--lavender);
         }
 
         nav {
             display: flex;
-            gap: 2rem;
+            gap: 1.8rem;
             align-items: center;
         }
 
@@ -77,70 +81,77 @@
             color: var(--text-light);
             text-decoration: none;
             font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            transition: color 0.3s;
+            font-weight: 500;
+            transition: color 0.25s;
         }
 
         nav a:hover {
-            color: var(--gold);
+            color: var(--lavender-bright);
         }
 
         .nav-cta {
-            background-color: var(--gold);
-            color: var(--obsidian) !important;
+            background: linear-gradient(135deg, var(--lavender), var(--lavender-deep));
+            color: var(--white) !important;
             padding: 0.6rem 1.4rem;
-            border-radius: 2px;
+            border-radius: 6px;
             font-weight: 600;
-            text-transform: uppercase;
-            font-size: 0.8rem !important;
-            letter-spacing: 1px;
+            font-size: 0.85rem !important;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(155, 135, 245, 0.35);
         }
 
         .nav-cta:hover {
-            background-color: var(--gold-light);
+            opacity: 0.92;
         }
 
         /* Hero Section */
         .hero {
-            background-color: var(--obsidian);
+            background: radial-gradient(circle at 80% 20%, rgba(155, 135, 245, 0.22), transparent 45%),
+                        radial-gradient(circle at 15% 80%, rgba(229, 193, 133, 0.12), transparent 40%),
+                        var(--midnight);
             color: var(--white);
-            padding: 5rem 6% 6rem;
+            padding: 5.5rem 6% 6rem;
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
+            grid-template-columns: 1.05fr 0.95fr;
             gap: 4rem;
             align-items: center;
-            border-bottom: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-lavender);
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            padding: 0.35rem 1rem;
-            font-size: 0.75rem;
-            letter-spacing: 1.5px;
+            background: rgba(155, 135, 245, 0.14);
+            border: 1px solid var(--lavender);
+            color: var(--lavender-bright);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 1px;
             text-transform: uppercase;
             margin-bottom: 1.5rem;
         }
 
         .hero h1 {
-            font-size: 4rem;
+            font-size: 4.1rem;
             line-height: 1.08;
-            margin: 0 0 1.5rem 0;
+            margin: 0 0 1.4rem 0;
             color: var(--white);
         }
 
         .hero h1 span {
-            color: var(--gold);
+            background: linear-gradient(90deg, var(--lavender-bright), var(--champagne));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             font-style: italic;
         }
 
         .hero p {
-            font-size: 1.1rem;
+            font-size: 1.12rem;
             color: var(--text-light);
-            margin-bottom: 2.5rem;
+            margin-bottom: 2.2rem;
             max-width: 540px;
             font-weight: 300;
         }
@@ -151,70 +162,73 @@
             flex-wrap: wrap;
         }
 
-        .btn-gold {
-            background-color: var(--gold);
-            color: var(--obsidian);
-            padding: 1rem 2.2rem;
+        .btn-primary {
+            background: linear-gradient(135deg, var(--lavender), var(--lavender-deep));
+            color: var(--white);
+            padding: 0.95rem 2.1rem;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-size: 0.92rem;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
             transition: all 0.3s;
-            border: 1px solid var(--gold);
+            border: none;
             cursor: pointer;
+            box-shadow: 0 8px 24px rgba(124, 102, 220, 0.35);
+            display: inline-block;
         }
 
-        .btn-gold:hover {
-            background-color: var(--gold-light);
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(124, 102, 220, 0.5);
         }
 
-        .btn-outline {
-            background-color: transparent;
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.06);
             color: var(--white);
-            padding: 1rem 2.2rem;
+            padding: 0.95rem 2.1rem;
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 0.92rem;
+            border-radius: 6px;
+            border: 1px solid var(--border-lavender);
             transition: all 0.3s;
+            display: inline-block;
         }
 
-        .btn-outline:hover {
-            border-color: var(--gold);
-            color: var(--gold);
+        .btn-secondary:hover {
+            border-color: var(--champagne);
+            color: var(--champagne);
         }
 
         .hero-image-box {
-            position: relative;
-            background: var(--charcoal);
-            border: 1px solid var(--border-subtle);
-            padding: 1.5rem;
-            border-radius: 4px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            background: var(--twilight);
+            border: 1px solid var(--border-lavender);
+            padding: 1.25rem;
+            border-radius: 12px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.65);
         }
 
         .hero-image-box img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 2px;
+            border-radius: 8px;
         }
 
         .image-caption {
-            margin-top: 1rem;
+            margin-top: 0.9rem;
             display: flex;
             justify-content: space-between;
             font-size: 0.8rem;
-            color: var(--gold);
-            letter-spacing: 1px;
+            color: var(--champagne);
+            letter-spacing: 0.8px;
             text-transform: uppercase;
+            font-weight: 600;
         }
 
-        /* Why Novaro Section */
-        .why-section {
+        /* Section Styling */
+        .section-wrap {
             padding: 6rem 6%;
             max-width: 1280px;
             margin: 0 auto;
@@ -222,50 +236,71 @@
 
         .section-header {
             text-align: center;
-            max-width: 700px;
+            max-width: 720px;
             margin: 0 auto 4rem;
         }
 
-        .section-subtitle {
-            color: var(--gold);
+        .section-tag {
+            display: inline-block;
+            background: var(--lavender-soft);
+            color: var(--lavender-deep);
+            border: 1px solid var(--border-lavender);
+            padding: 0.3rem 1rem;
+            border-radius: 50px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-size: 0.8rem;
+            letter-spacing: 1.5px;
+            font-size: 0.75rem;
             font-weight: 700;
-            display: block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .section-header h2 {
-            font-size: 3rem;
+            font-size: 3.1rem;
             margin: 0 0 1rem 0;
-            color: var(--obsidian);
+            color: var(--midnight);
+            line-height: 1.15;
         }
 
+        /* 4 Simple Builder Advantages */
         .why-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+            gap: 1.8rem;
         }
 
         .why-card {
             background: var(--white);
-            padding: 2.5rem;
-            border: 1px solid #e5e0d8;
-            border-top: 3px solid var(--gold);
+            padding: 2.2rem;
+            border-radius: 12px;
+            border: 1px solid #e6e1f7;
+            border-top: 4px solid var(--lavender);
+            box-shadow: 0 10px 25px rgba(19, 17, 28, 0.04);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .why-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+            box-shadow: 0 18px 35px rgba(124, 102, 220, 0.12);
+        }
+
+        .why-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: var(--lavender-soft);
+            color: var(--lavender-deep);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
         }
 
         .why-card h3 {
-            font-size: 1.6rem;
-            margin-top: 0;
-            margin-bottom: 0.75rem;
-            color: var(--obsidian);
+            font-size: 1.55rem;
+            margin: 0 0 0.7rem 0;
+            color: var(--midnight);
         }
 
         .why-card p {
@@ -274,12 +309,95 @@
             margin: 0;
         }
 
-        /* Interactive Product Tabs Section */
+        /* Visual Gallery Section (Smart Crops + Diagrams) */
+        .gallery-section {
+            background: linear-gradient(180deg, var(--lavender-soft) 0%, var(--lavender-mist) 100%);
+            padding: 6rem 6%;
+            border-top: 1px solid #e6e1f7;
+            border-bottom: 1px solid #e6e1f7;
+        }
+
+        .gallery-container {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .gallery-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #e2dcf5;
+            box-shadow: 0 12px 24px rgba(19, 17, 28, 0.05);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .crop-window {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            background: var(--midnight);
+            position: relative;
+        }
+
+        .crop-window img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-card:hover .crop-window img {
+            transform: scale(1.05);
+        }
+
+        /* Smart focal crops of Toilet photo.jpg */
+        .crop-lifestyle {
+            object-position: 18% 50%;
+        }
+
+        .crop-finishes {
+            object-position: 82% 48%;
+        }
+
+        .crop-dimensions {
+            object-position: 82% 72%;
+        }
+
+        .gallery-info {
+            padding: 1.5rem;
+        }
+
+        .gallery-info span {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--lavender-deep);
+        }
+
+        .gallery-info h4 {
+            margin: 0.4rem 0 0.5rem;
+            font-size: 1.2rem;
+            color: var(--midnight);
+        }
+
+        .gallery-info p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* Interactive Product Catalogue Tabs */
         .catalogue-section {
             background-color: var(--white);
             padding: 6rem 6%;
-            border-top: 1px solid #e5e0d8;
-            border-bottom: 1px solid #e5e0d8;
         }
 
         .catalogue-container {
@@ -290,91 +408,88 @@
         .tabs-nav {
             display: flex;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 0.75rem;
             margin-bottom: 3.5rem;
             flex-wrap: wrap;
-            border-bottom: 1px solid #e5e0d8;
-            padding-bottom: 1rem;
         }
 
         .tab-btn {
-            background: transparent;
-            border: 1px solid transparent;
-            padding: 0.8rem 1.8rem;
+            background: var(--lavender-mist);
+            border: 1px solid #e2dcf5;
+            padding: 0.85rem 1.6rem;
+            border-radius: 8px;
             font-family: 'Plus Jakarta Sans', sans-serif;
             font-size: 0.9rem;
             font-weight: 600;
             color: var(--text-muted);
             cursor: pointer;
-            transition: all 0.3s;
-            letter-spacing: 0.5px;
+            transition: all 0.25s;
         }
 
         .tab-btn:hover {
-            color: var(--obsidian);
+            border-color: var(--lavender);
+            color: var(--midnight);
         }
 
         .tab-btn.active {
-            background-color: var(--obsidian);
-            color: var(--gold);
-            border-color: var(--obsidian);
+            background: var(--midnight);
+            color: var(--lavender-bright);
+            border-color: var(--midnight);
+            box-shadow: 0 6px 18px rgba(19, 17, 28, 0.18);
         }
 
         .tab-content {
             display: none;
-            animation: fadeIn 0.4s ease;
+            animation: fadeIn 0.35s ease;
         }
 
         .tab-content.active {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3.5rem;
             align-items: start;
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
+            from { opacity: 0; transform: translateY(6px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .product-Gallery {
-            background: var(--stone);
-            padding: 2rem;
-            border: 1px solid #e5e0d8;
+        .product-box {
+            background: var(--lavender-soft);
+            padding: 1.8rem;
+            border-radius: 12px;
+            border: 1px solid #e2dcf5;
         }
 
-        .product-Gallery img {
+        .product-box img {
             width: 100%;
-            height: auto;
+            border-radius: 8px;
             display: block;
-        }
-
-        .product-details h3 {
-            font-size: 2.5rem;
-            margin: 0 0 0.5rem 0;
         }
 
         .model-tag {
             display: inline-block;
-            background: var(--stone);
-            color: var(--obsidian);
-            padding: 0.3rem 0.8rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            border-left: 3px solid var(--gold);
+            background: var(--lavender-soft);
+            color: var(--lavender-deep);
+            padding: 0.35rem 0.9rem;
+            border-radius: 4px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            border-left: 3px solid var(--lavender-deep);
         }
 
         .spec-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0 2rem;
-            font-size: 0.9rem;
+            margin: 1.2rem 0 1.8rem;
+            font-size: 0.92rem;
         }
 
         .spec-table th, .spec-table td {
-            padding: 0.85rem 0;
-            border-bottom: 1px solid #e5e0d8;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #ece8f8;
             text-align: left;
         }
 
@@ -386,87 +501,133 @@
 
         .spec-table td {
             font-weight: 600;
-            color: var(--obsidian);
+            color: var(--midnight);
         }
 
-        .tier-comparison {
-            background: var(--stone);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border: 1px solid #e5e0d8;
+        .tier-box {
+            background: var(--lavender-mist);
+            padding: 1.4rem;
+            border-radius: 8px;
+            margin-bottom: 1.8rem;
+            border: 1px solid #e2dcf5;
         }
 
-        .tier-comparison h4 {
-            margin: 0 0 0.75rem 0;
-            font-size: 1rem;
+        .tier-box h4 {
+            margin: 0 0 0.6rem 0;
+            font-size: 0.95rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--obsidian);
+            letter-spacing: 0.8px;
+            color: var(--lavender-deep);
         }
 
-        .tier-comparison ul {
-            margin: 0;
-            padding-left: 1.2rem;
-            font-size: 0.9rem;
-            color: var(--text-dark);
-        }
-
-        .tier-comparison li {
-            margin-bottom: 0.4rem;
-        }
-
-        /* WaterMark Compliance Section */
-        .compliance-section {
-            background-color: var(--obsidian);
+        /* Builder & Plumber Manuals Resource Hub */
+        .manuals-section {
+            background: var(--midnight);
             color: var(--white);
             padding: 6rem 6%;
+            border-top: 1px solid var(--border-lavender);
         }
 
-        .compliance-container {
-            max-width: 1100px;
+        .manuals-container {
+            max-width: 1240px;
             margin: 0 auto;
+        }
+
+        .manuals-grid {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 3.5rem;
+        }
+
+        .manual-card {
+            background: var(--twilight);
+            border: 1px solid var(--border-lavender);
+            padding: 2.2rem;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .manual-card .doc-badge {
+            display: inline-block;
+            background: rgba(229, 193, 133, 0.15);
+            color: var(--champagne);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .manual-card h3 {
+            font-size: 1.65rem;
+            color: var(--white);
+            margin: 0 0 0.75rem 0;
+        }
+
+        .manual-card ul {
+            padding-left: 1.2rem;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin: 0 0 1.8rem 0;
+        }
+
+        .manual-card li {
+            margin-bottom: 0.45rem;
+        }
+
+        .video-showcase {
+            background: var(--twilight);
+            border: 1px solid var(--border-lavender);
+            border-radius: 12px;
+            padding: 2.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 2.5rem;
             align-items: center;
         }
 
-        .compliance-text h2 {
-            font-size: 3rem;
-            color: var(--white);
-            margin: 0 0 1rem 0;
+        .video-showcase video {
+            width: 100%;
+            border-radius: 8px;
+            background: #000;
+            border: 1px solid rgba(255,255,255,0.15);
         }
 
-        .compliance-text p {
-            color: var(--text-light);
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
+        /* WaterMark Compliance Banner */
+        .compliance-section {
+            background: linear-gradient(135deg, #191528 0%, #251e3e 100%);
+            color: var(--white);
+            padding: 5.5rem 6%;
+            border-top: 1px solid var(--border-lavender);
+            border-bottom: 1px solid var(--border-lavender);
+        }
+
+        .compliance-container {
+            max-width: 1140px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 3.5rem;
+            align-items: center;
         }
 
         .cert-card {
-            background: var(--charcoal);
-            border: 1px solid var(--gold);
-            padding: 2.5rem;
+            background: rgba(19, 17, 28, 0.85);
+            border: 1px solid var(--champagne);
+            border-radius: 12px;
+            padding: 2.2rem;
             position: relative;
-        }
-
-        .cert-card::before {
-            content: "OFFICIAL AUSTRALIAN CERTIFICATION";
-            position: absolute;
-            top: -12px;
-            left: 2rem;
-            background: var(--gold);
-            color: var(--obsidian);
-            font-size: 0.7rem;
-            font-weight: 700;
-            padding: 0.2rem 0.8rem;
-            letter-spacing: 1px;
         }
 
         .cert-row {
             display: flex;
             justify-content: space-between;
-            padding: 0.8rem 0;
+            padding: 0.75rem 0;
             border-bottom: 1px solid rgba(255,255,255,0.1);
             font-size: 0.9rem;
         }
@@ -476,29 +637,30 @@
         }
 
         .cert-row span:last-child {
-            color: var(--gold);
+            color: var(--champagne);
             font-weight: 600;
             text-align: right;
         }
 
-        /* Contact / Formspree Section */
+        /* Contact Form Section */
         .contact-section {
             padding: 6rem 6%;
-            max-width: 900px;
+            max-width: 920px;
             margin: 0 auto;
         }
 
         .form-card {
             background: var(--white);
-            padding: 3.5rem;
-            border: 1px solid #e5e0d8;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+            padding: 3.2rem;
+            border-radius: 14px;
+            border: 1px solid #e2dcf5;
+            box-shadow: 0 20px 45px rgba(19, 17, 28, 0.06);
         }
 
         .form-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
+            gap: 1.4rem;
             margin-bottom: 1.5rem;
         }
 
@@ -513,26 +675,27 @@
 
         label {
             font-size: 0.8rem;
-            font-weight: 600;
+            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-            color: var(--obsidian);
+            letter-spacing: 0.8px;
+            margin-bottom: 0.45rem;
+            color: var(--midnight);
         }
 
         input, select, textarea {
             padding: 0.9rem 1rem;
-            border: 1px solid #d1cdc4;
-            background: var(--stone);
+            border: 1px solid #d5cef0;
+            border-radius: 6px;
+            background: var(--lavender-mist);
             font-family: inherit;
             font-size: 0.95rem;
-            color: var(--obsidian);
-            transition: border-color 0.3s;
+            color: var(--midnight);
+            transition: border-color 0.25s, background 0.25s;
         }
 
         input:focus, select:focus, textarea:focus {
             outline: none;
-            border-color: var(--gold);
+            border-color: var(--lavender-deep);
             background: var(--white);
         }
 
@@ -542,24 +705,24 @@
         }
 
         footer {
-            background: var(--obsidian);
-            color: var(--text-muted);
+            background: var(--midnight);
+            color: var(--text-light);
             text-align: center;
             padding: 3rem 6%;
-            border-top: 1px solid var(--border-subtle);
-            font-size: 0.85rem;
+            border-top: 1px solid var(--border-lavender);
+            font-size: 0.88rem;
         }
 
         footer strong {
-            color: var(--gold);
+            color: var(--lavender-bright);
         }
 
-        @media (max-width: 900px) {
-            .hero, .tab-content.active, .compliance-container, .form-grid {
+        @media (max-width: 920px) {
+            .hero, .tab-content.active, .compliance-container, .video-showcase, .form-grid {
                 grid-template-columns: 1fr;
             }
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 2.9rem;
             }
             nav {
                 display: none;
@@ -575,61 +738,139 @@
     <header>
         <a href="#" class="logo">NOVARO<span>.</span></a>
         <nav>
-            <a href="#why-novaro">Engineering</a>
-            <a href="#catalogue">Collection</a>
-            <a href="#compliance">WaterMark Certified</a>
-            <a href="#inquire" class="nav-cta">Request Quote</a>
+            <a href="#advantages">Why Novaro</a>
+            <a href="#gallery">Visuals</a>
+            <a href="#catalogue">Models</a>
+            <a href="#manuals">Manuals & Tank Info</a>
+            <a href="#compliance">WaterMark</a>
+            <a href="#inquire" class="nav-cta">Get Builder Pricing</a>
         </nav>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
         <div>
-            <div class="hero-badge">✓ WaterMark Certified • WMK040285</div>
-            <h1>Architectural Luxury.<br><span>Intelligent Hygiene.</span></h1>
-            <p>Designed for premier Australian commercial builds and luxury residences. The Novaro T3 Series pairs a space-saving wall-hung silhouette with 400kg concealed steel engineering and 100% touchless operation.</p>
+            <div class="hero-badge">✓ Australian WaterMark Certified • WMK040285</div>
+            <h1>Smart Bathrooms,<br><span>Made Simple for Builders.</span></h1>
+            <p>The Novaro T3 wall-hung smart toilet combines a space-saving floating bowl, a heavy-duty 400kg in-wall water tank frame, and 100% hands-free hygiene—ready for modern Australian homes and commercial developments.</p>
             <div class="btn-group">
-                <a href="#catalogue" class="btn-gold">Explore Collection</a>
-                <a href="#compliance" class="btn-outline">View Certification</a>
+                <a href="#inquire" class="btn-primary">Request Builder Quote</a>
+                <a href="#manuals" class="btn-secondary">View Manuals & Tank Specs</a>
             </div>
         </div>
         <div class="hero-image-box">
-            <img src="Toilet photo.jpg" alt="Novaro T3 Wall-Hung Smart Toilet Specification Sheet" onerror="this.style.display='none'; document.getElementById('img-fallback').style.display='block';">
-            <div id="img-fallback" style="display:none; padding: 4rem 2rem; text-align: center; color: #c5a059; border: 1px dashed rgba(197,160,89,0.4);">
-                <strong>[Product Image Ready]</strong><br>
-                <span style="font-size: 0.85rem; color: #d1d5db;">Upload "Toilet photo.jpg" to your GitHub repository to display the T3 visual showcase here.</span>
+            <img src="Toilet photo.jpg" alt="Novaro T3 Wall-Hung Smart Toilet" onerror="this.style.display='none'; document.getElementById('hero-fallback').style.display='block';">
+            <div id="hero-fallback" style="display:none; padding: 3.5rem 1.5rem; text-align: center; color: #b8a9ff; border: 1px dashed rgba(184,169,255,0.4); border-radius: 8px;">
+                <strong>Novaro T3 Visual Showcase</strong><br>
+                <span style="font-size: 0.85rem; color: #dcd7ed;">Upload <code>Toilet photo.jpg</code> to your GitHub repository to display the product photo here.</span>
             </div>
             <div class="image-caption">
-                <span>Model: Novaro T3 / T31 Series</span>
+                <span>Novaro T3 / T31 Flagship Suite</span>
                 <span>580 × 400 × 420 mm</span>
             </div>
         </div>
     </section>
 
-    <!-- WHY NOVARO SECTION -->
-    <section class="why-section" id="why-novaro">
+    <!-- 4 SIMPLE, HUMAN ADVANTAGES FOR BUILDERS & DEVELOPERS -->
+    <section class="section-wrap" id="advantages">
         <div class="section-header">
-            <span class="section-subtitle">The Novaro Advantage</span>
-            <h2>Why Specify the Novaro T3?</h2>
-            <p style="color: var(--text-muted);">Engineered from the inside out to solve spatial, structural, and sanitary challenges in modern Australian bathrooms.</p>
+            <span class="section-tag">Built for Australian Projects</span>
+            <h2>Why Builders & Homeowners Love the Novaro T3</h2>
+            <p style="color: var(--text-muted);">No complicated jargon—just four practical reasons why the Novaro T3 adds instant value to any new build or bathroom renovation.</p>
         </div>
 
         <div class="why-grid">
             <div class="why-card">
-                <h3>Space-Saving Floating Form</h3>
-                <p>Measuring a compact 580 × 400 × 420mm, the wall-hung profile maximizes floor space while maintaining a full-sized, ergonomic 300 × 220mm comfortable seating area. Elevated off the tiles, it leaves zero dead corners—allowing mops and robot vacuums to glide effortlessly underneath.</p>
+                <div class="why-icon">01</div>
+                <h3>Saves Space & Cleans Easily</h3>
+                <p>Because the bowl floats off the floor and measures just 580mm deep, bathrooms feel noticeably bigger. With no base touching the tiles, mops and robot vacuums glide right underneath with zero dust traps.</p>
             </div>
             <div class="why-card">
-                <h3>400kg Concealed Steel Frame</h3>
-                <p>Supported by a heavy-duty, anti-rust and anti-corrosion concealed cistern bracket tested to bear up to 400kg. Available in high or low in-wall tank configurations to suit both cavity walls and false walls without requiring a separate cistern purchase.</p>
+                <div class="why-icon">02</div>
+                <h3>All-in-One 400kg Steel Frame</h3>
+                <p>No need to source a separate cistern. Every unit uses a rust-resistant, concealed steel water tank frame tested to hold 400kg—with High and Low tank options to fit standard stud walls or false walls.</p>
             </div>
             <div class="why-card">
-                <h3>Touchless Radar & Foot Control</h3>
-                <p>Equipped with microwave radar wave sensors that automatically open the lid upon approach and close/flush upon departure. Integrated capacitive foot-touch sensors allow hands-free lid opening, seat flipping, and flushing.</p>
+                <div class="why-icon">03</div>
+                <h3>100% Hands-Free Hygiene</h3>
+                <p>Walk up and the microwave radar sensor lifts the lid automatically. Need to lift the seat or flush? Just tap the base sensor with your foot. Walk away and it closes and flushes on its own.</p>
             </div>
             <div class="why-card">
-                <h3>Clinical UV & Instant Heating</h3>
-                <p>Features ultraviolet (UV) ceramic nozzle sterilization, double water filtration, an anti-fouling glaze, and an anti-bacterial flame-retardant seat. Enjoy instant water heating, warm air drying, and reliable mechanical flushing even during power outages.</p>
+                <div class="why-icon">04</div>
+                <h3>Instant Warmth & UV Self-Cleaning</h3>
+                <p>Heats washing water instantly (no cold surprises), warms the seat across 4 comfort levels, dries with warm air, and sterilizes its ceramic nozzle with UV light after every use.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MULTI-ANGLE VISUAL GALLERY -->
+    <section class="gallery-section" id="gallery">
+        <div class="gallery-container">
+            <div class="section-header">
+                <span class="section-tag">Visual Breakdown</span>
+                <h2>Inside & Out: The T3 Design</h2>
+                <p style="color: var(--text-muted);">Explore the wall-hung installation profile, dual colour finishes, concealed tank engineering, and compact seating dimensions.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Card 1: In-Wall Cutaway View -->
+                <div class="gallery-card">
+                    <div class="crop-window">
+                        <img src="Toilet photo.jpg" class="crop-lifestyle" alt="Novaro T3 In-Wall Cutaway">
+                    </div>
+                    <div class="gallery-info">
+                        <span>Space-Saving Profile</span>
+                        <h4>Concealed Cistern Cutaway</h4>
+                        <p>The water tank and steel frame hide neatly inside the wall cavity, leaving only the sleek ceramic pan and flush plate visible.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: White & Matte Black Finishes -->
+                <div class="gallery-card">
+                    <div class="crop-window">
+                        <img src="Toilet photo.jpg" class="crop-finishes" alt="Novaro T3 Alpine White and Matte Black Finishes">
+                    </div>
+                    <div class="gallery-info">
+                        <span>Dual Colour Options</span>
+                        <h4>Alpine White & Matte Black</h4>
+                        <p>Available in classic gloss white or bold matte black with an LED digital temperature display panel (showing seat & water temp).</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: High vs Low Tank Diagram -->
+                <div class="gallery-card">
+                    <div class="crop-window" style="display:flex; align-items:center; justify-content:center; padding:1.2rem; background: linear-gradient(135deg, #1d192b, #2e2647);">
+                        <svg viewBox="0 0 320 180" width="100%" height="100%">
+                            <!-- High Tank -->
+                            <rect x="35" y="15" width="85" height="150" fill="none" stroke="#9b87f5" stroke-width="4" rx="4"/>
+                            <rect x="47" y="30" width="61" height="58" fill="rgba(155,135,245,0.2)" stroke="#e5c185" stroke-width="2" rx="4"/>
+                            <circle cx="77" cy="118" r="10" fill="none" stroke="#ffffff" stroke-width="2"/>
+                            <text x="77" y="155" fill="#ffffff" font-size="11" text-anchor="middle" font-family="sans-serif" font-weight="bold">HIGH TANK</text>
+                            <!-- Low Tank -->
+                            <rect x="195" y="38" width="90" height="127" fill="none" stroke="#9b87f5" stroke-width="4" rx="4"/>
+                            <rect x="207" y="52" width="66" height="48" fill="rgba(155,135,245,0.2)" stroke="#e5c185" stroke-width="2" rx="4"/>
+                            <circle cx="240" cy="122" r="10" fill="none" stroke="#ffffff" stroke-width="2"/>
+                            <text x="240" y="155" fill="#ffffff" font-size="11" text-anchor="middle" font-family="sans-serif" font-weight="bold">LOW TANK</text>
+                        </svg>
+                    </div>
+                    <div class="gallery-info">
+                        <span>Flexible Framing</span>
+                        <h4>High & Low Water Tank Options</h4>
+                        <p>Choose the High Version for cavity walls (&gt;18cm thick) or the Low Version for false walls with front or top flush button placement.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: CAD Blueprint & Seating Size -->
+                <div class="gallery-card">
+                    <div class="crop-window">
+                        <img src="Toilet photo.jpg" class="crop-dimensions" alt="Novaro T3 Dimension Drawing">
+                    </div>
+                    <div class="gallery-info">
+                        <span>Ergonomic Comfort</span>
+                        <h4>Compact 580mm Body, Full-Size Seat</h4>
+                        <p>Saves bathroom floor space with a 580 × 400 × 420mm outer shell while keeping a generous 300 × 220mm comfortable seating opening.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -638,9 +879,9 @@
     <section class="catalogue-section" id="catalogue">
         <div class="catalogue-container">
             <div class="section-header">
-                <span class="section-subtitle">Certified Lineup</span>
-                <h2>The Novaro Smart Collection</h2>
-                <p style="color: var(--text-muted);">Select a model series below to review specifications and architectural configurations.</p>
+                <span class="section-tag">Product Lineup</span>
+                <h2>Explore the Novaro Range</h2>
+                <p style="color: var(--text-muted);">Compare our flagship T3 & T31 series alongside our upcoming WaterMark-certified suites.</p>
             </div>
 
             <div class="tabs-nav">
@@ -652,129 +893,181 @@
 
             <!-- TAB 1: T3 & T31 -->
             <div id="model-t3" class="tab-content active">
-                <div class="product-Gallery">
-                    <img src="Toilet photo.jpg" alt="Novaro T3 Smart Toilet" onerror="this.outerHTML='<div style=\'padding:4rem 2rem;text-align:center;color:#6e717a;\'><strong>Novaro T3 / T31 Visual</strong><br><small>Upload Toilet photo.jpg to GitHub</small></div>'">
+                <div class="product-box">
+                    <img src="Toilet photo.jpg" alt="Novaro T3 Smart Toilet">
+                    <div style="margin-top: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <a href="T3.pdf" target="_blank" class="btn-secondary" style="background:var(--midnight); color:var(--white); padding:0.6rem 1.1rem; font-size:0.8rem;">View T3 Brochure (PDF)</a>
+                        <a href="T31.pdf" target="_blank" class="btn-secondary" style="background:var(--midnight); color:var(--white); padding:0.6rem 1.1rem; font-size:0.8rem;">View T31 Brochure (PDF)</a>
+                    </div>
                 </div>
-                <div class="product-details">
+                <div>
                     <span class="model-tag">AVAILABLE NOW • WATERMARK CERTIFIED</span>
-                    <h3>Novaro T3 & T31 Wall-Hung</h3>
-                    <p style="color: var(--text-muted);">Our flagship intelligent wall-hung suite with integrated digital temperature display, concealed cistern, and dual-finish options.</p>
+                    <h3 style="font-size: 2.4rem; margin: 0 0 0.5rem 0;">Novaro T3 & T31 Wall-Hung Suite</h3>
+                    <p style="color: var(--text-muted);">Our flagship space-saving wall-hung smart toilet with digital temperature display, instant water heating, and 400kg steel carrier frame.</p>
 
                     <table class="spec-table">
                         <tr>
-                            <th>Available Finishes</th>
-                            <td>Alpine White / Matte Obsidian Black</td>
+                            <th>Colours</th>
+                            <td>Alpine White or Matte Black</td>
                         </tr>
                         <tr>
                             <th>Dimensions</th>
                             <td>580mm (L) × 400mm (W) × 420mm (H)</td>
                         </tr>
                         <tr>
-                            <th>Trap & Protection</th>
-                            <td>180mm P-Trap • IPX4 Water Resistance • 12V Safety Voltage</td>
+                            <th>Plumbing & Power</th>
+                            <td>180mm P-Trap • AC 220V/110V (1350W) • IPX4 Rated</td>
                         </tr>
                         <tr>
-                            <th>Core Hygiene</th>
-                            <td>Hip, Female, Massage & Moving Wash • Instant Heating • Warm Air Dryer</td>
+                            <th>Temperature Control</th>
+                            <td>4-Level Water & Seat (up to 40°C) • Warm Air Dryer (up to 55°C)</td>
                         </tr>
                     </table>
 
-                    <div class="tier-comparison">
-                        <h4>Configuration Options</h4>
-                        <ul>
-                            <li><strong>Basic Version:</strong> Manual cover, Foot-touch flushing, Night light, Zero water pressure limitation, Full bidet & heated seat suite.</li>
-                            <li><strong>High / Advanced Version (T31):</strong> Adds Auto radar wave open/close cover, Foot-touch open cover & seat, UV Nozzle Sterilization, Voice Control, and Mobile App Control.</li>
+                    <div class="tier-box">
+                        <h4>Choose Your Trim Level</h4>
+                        <ul style="margin:0; padding-left:1.2rem; font-size:0.9rem;">
+                            <li style="margin-bottom:0.4rem;"><strong>T3 Basic Version:</strong> Soft-close manual lid, foot-touch flushing, heated seat, instant warm bidet washes, warm dryer, wireless remote, and power-outage backup flush.</li>
+                            <li><strong>T31 High / Advanced Version:</strong> Adds radar wave auto-open/close lid, foot-touch lid & seat opening, UV ceramic nozzle sterilization, voice control, and mobile app control.</li>
                         </ul>
                     </div>
 
-                    <a href="#inquire" class="btn-gold" style="display:inline-block;">Request T3 / T31 Pricing</a>
+                    <a href="#inquire" class="btn-primary">Request Builder Quote</a>
                 </div>
             </div>
 
             <!-- TAB 2: T4 & T41 -->
             <div id="model-t4" class="tab-content">
-                <div class="product-Gallery" style="text-align:center; padding: 5rem 2rem;">
-                    <span style="color:var(--gold); font-size:0.8rem; letter-spacing:2px; text-transform:uppercase;">Architectural Preview</span>
+                <div class="product-box" style="text-align:center; padding: 4.5rem 2rem;">
+                    <span class="section-tag">Upcoming Release</span>
                     <h3 style="font-size:2.2rem; margin:1rem 0;">Novaro T4 & T41 Series</h3>
-                    <p style="color:var(--text-muted);">Approved under WaterMark Schedule WMK040285.</p>
+                    <p style="color:var(--text-muted);">Certified under WaterMark Schedule WMK040285.</p>
                 </div>
-                <div class="product-details">
-                    <span class="model-tag">COMING SOON • COMMERCIAL PRE-ORDER</span>
-                    <h3>Novaro T4 & T41 Suite</h3>
-                    <p style="color: var(--text-muted);">Fully endorsed under our WMTS 051:2021 certification for Australian plumbing installations. Ideal for multi-residential developments looking for streamlined smart bidet integration.</p>
+                <div>
+                    <span class="model-tag">COMING SOON • DEVELOPER PRE-ORDER</span>
+                    <h3 style="font-size: 2.3rem; margin: 0 0 0.5rem 0;">Novaro T4 & T41 Suite</h3>
+                    <p style="color: var(--text-muted);">Pre-certified to Australian WMTS 051:2021 standards for multi-residential apartment and townhouse developments.</p>
                     <table class="spec-table">
-                        <tr>
-                            <th>Certification</th>
-                            <td>WaterMark WMK040285 (Endorsed Jan 2025)</td>
-                        </tr>
-                        <tr>
-                            <th>Standard</th>
-                            <td>WMTS 051:2021 Bidet Douche Seats</td>
-                        </tr>
-                        <tr>
-                            <th>Availability</th>
-                            <td>Available for Commercial Forward Orders</td>
-                        </tr>
+                        <tr><th>WaterMark Licence</th><td>WMK040285 (Endorsed Jan 2025)</td></tr>
+                        <tr><th>Standard</th><td>WMTS 051:2021 Bidet Douche Seats</td></tr>
+                        <tr><th>Order Status</th><td>Open for Commercial Forward Orders</td></tr>
                     </table>
-                    <a href="#inquire" class="btn-gold" style="display:inline-block;">Register Commercial Interest</a>
+                    <a href="#inquire" class="btn-primary">Register Project Interest</a>
                 </div>
             </div>
 
             <!-- TAB 3: T5 & T51 -->
             <div id="model-t5" class="tab-content">
-                <div class="product-Gallery" style="text-align:center; padding: 5rem 2rem;">
-                    <span style="color:var(--gold); font-size:0.8rem; letter-spacing:2px; text-transform:uppercase;">Architectural Preview</span>
+                <div class="product-box" style="text-align:center; padding: 4.5rem 2rem;">
+                    <span class="section-tag">Upcoming Release</span>
                     <h3 style="font-size:2.2rem; margin:1rem 0;">Novaro T5 & T51 Series</h3>
-                    <p style="color:var(--text-muted);">Approved under WaterMark Schedule WMK040285.</p>
+                    <p style="color:var(--text-muted);">Certified under WaterMark Schedule WMK040285.</p>
                 </div>
-                <div class="product-details">
-                    <span class="model-tag">COMING SOON • COMMERCIAL PRE-ORDER</span>
-                    <h3>Novaro T5 & T51 Suite</h3>
-                    <p style="color: var(--text-muted);">Designed for high-tier hospitality and executive bathroom fit-outs. Certified for Australian compliance and available for project specification inquiries.</p>
+                <div>
+                    <span class="model-tag">COMING SOON • DEVELOPER PRE-ORDER</span>
+                    <h3 style="font-size: 2.3rem; margin: 0 0 0.5rem 0;">Novaro T5 & T51 Suite</h3>
+                    <p style="color: var(--text-muted);">Tailored for boutique hotels, executive offices, and luxury home builds across Australia.</p>
                     <table class="spec-table">
-                        <tr>
-                            <th>Certification</th>
-                            <td>WaterMark WMK040285 (Endorsed Jan 2025)</td>
-                        </tr>
-                        <tr>
-                            <th>Standard</th>
-                            <td>WMTS 051:2021 Bidet Douche Seats</td>
-                        </tr>
-                        <tr>
-                            <th>Availability</th>
-                            <td>Available for Commercial Forward Orders</td>
-                        </tr>
+                        <tr><th>WaterMark Licence</th><td>WMK040285 (Endorsed Jan 2025)</td></tr>
+                        <tr><th>Standard</th><td>WMTS 051:2021 Bidet Douche Seats</td></tr>
+                        <tr><th>Order Status</th><td>Open for Commercial Forward Orders</td></tr>
                     </table>
-                    <a href="#inquire" class="btn-gold" style="display:inline-block;">Register Commercial Interest</a>
+                    <a href="#inquire" class="btn-primary">Register Project Interest</a>
                 </div>
             </div>
 
             <!-- TAB 4: T6 & T7 -->
             <div id="model-t6" class="tab-content">
-                <div class="product-Gallery" style="text-align:center; padding: 5rem 2rem;">
-                    <span style="color:var(--gold); font-size:0.8rem; letter-spacing:2px; text-transform:uppercase;">Architectural Preview</span>
+                <div class="product-box" style="text-align:center; padding: 4.5rem 2rem;">
+                    <span class="section-tag">Executive Lineup</span>
                     <h3 style="font-size:2.2rem; margin:1rem 0;">Novaro T6, T61, T7 & T71</h3>
-                    <p style="color:var(--text-muted);">Approved under WaterMark Schedule WMK040285.</p>
+                    <p style="color:var(--text-muted);">Certified under WaterMark Schedule WMK040285.</p>
                 </div>
-                <div class="product-details">
+                <div>
                     <span class="model-tag">COMING SOON • BESPOKE SERIES</span>
-                    <h3>Executive T6 & T7 Lineup</h3>
-                    <p style="color: var(--text-muted);">Our upcoming pinnacle series (Models T6, T61, T7, and T71) holds full WaterMark endorsement for seamless specification into luxury Australian builds.</p>
+                    <h3 style="font-size: 2.3rem; margin: 0 0 0.5rem 0;">Executive T6 & T7 Series</h3>
+                    <p style="color: var(--text-muted);">Our top-tier custom order suites, fully endorsed under our Australian WaterMark license for effortless plumbing sign-off.</p>
                     <table class="spec-table">
-                        <tr>
-                            <th>Certified Models</th>
-                            <td>T6, T61, T7, T71</td>
-                        </tr>
-                        <tr>
-                            <th>Certification</th>
-                            <td>WaterMark WMK040285 (WMTS 051:2021)</td>
-                        </tr>
-                        <tr>
-                            <th>Availability</th>
-                            <td>Bespoke & Wholesale Specification</td>
-                        </tr>
+                        <tr><th>Certified Models</th><td>T6, T61, T7, T71</td></tr>
+                        <tr><th>WaterMark Licence</th><td>WMK040285 (WMTS 051:2021)</td></tr>
+                        <tr><th>Order Status</th><td>Custom Project Specification</td></tr>
                     </table>
-                    <a href="#inquire" class="btn-gold" style="display:inline-block;">Inquire About Executive Series</a>
+                    <a href="#inquire" class="btn-primary">Inquire About Executive Series</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BUILDER & PLUMBER RESOURCE HUB: MANUALS, WATER TANK INSTRUCTIONS & VIDEO -->
+    <section class="manuals-section" id="manuals">
+        <div class="manuals-container">
+            <div class="section-header">
+                <span class="section-tag" style="background:rgba(155,135,245,0.18); color:var(--lavender-bright);">Trade & Installer Hub</span>
+                <h2 style="color: var(--white);">Manuals & Water Tank Instructions</h2>
+                <p style="color: var(--text-light);">Everything your plumber, electrician, and site manager need on site—from rough-in frame dimensions to user manuals and 3D video guides.</p>
+            </div>
+
+            <div class="manuals-grid">
+                <!-- Document 1: Water Tank Instructions -->
+                <div class="manual-card">
+                    <div>
+                        <span class="doc-badge">Plumber Rough-In Guide</span>
+                        <h3>In-Wall Water Tank & Frame Manual</h3>
+                        <ul>
+                            <li><strong>Frame Size:</strong> 500mm wide × 1120mm high (88mm tank depth; 160–220mm cavity allowance).</li>
+                            <li><strong>Mounting Centers:</strong> Supports both 180mm and 230mm pan bolt spacing; 110mm sewer pipe.</li>
+                            <li><strong>Wall Cladding:</strong> Suits 12mm to 72mm tile and wallboard thickness; 0–200mm adjustable leg height.</li>
+                            <li><strong>Line Flush Step:</strong> Includes 45-second pre-tile water line flush procedure and pipe cutting guide (L1+6mm / L2+3mm).</li>
+                        </ul>
+                    </div>
+                    <a href="water tank instruction(V30)_260804_115239.pdf" target="_blank" class="btn-primary" style="text-align:center;">Open Water Tank Manual (PDF)</a>
+                </div>
+
+                <!-- Document 2: T3 Product & Electrical Manual -->
+                <div class="manual-card">
+                    <div>
+                        <span class="doc-badge">Electrical & User Guide</span>
+                        <h3>T3 Smart Toilet Operations Manual</h3>
+                        <ul>
+                            <li><strong>Power Specs:</strong> AC 220V/110V, 50/60Hz, 1350W rated power (grounded 3-pin outlet set min. 0.3m above floor).</li>
+                            <li><strong>Water Pressure:</strong> 0.06 MPa to 0.75 MPa static pressure with concealed tank.</li>
+                            <li><strong>Remote & Side Knob:</strong> Full guide for 4-grade water/seat/dryer temperatures, radar/foot mode toggle, and pairing.</li>
+                            <li><strong>Care & Diagnostics:</strong> Detachable ceramic pan cleaning guide and fault troubleshooting chart.</li>
+                        </ul>
+                    </div>
+                    <a href="T3 Manual_Eng.pdf" target="_blank" class="btn-primary" style="text-align:center;">Open T3 User Manual (PDF)</a>
+                </div>
+
+                <!-- Document 3: Brochures & WaterMark Cert -->
+                <div class="manual-card">
+                    <div>
+                        <span class="doc-badge">Spec Sheets & Compliance</span>
+                        <h3>Brochures & WaterMark Certificate</h3>
+                        <ul>
+                            <li><strong>T3 / T31 Spec Brochures:</strong> Full feature checklists, High vs. Low tank diagrams, and bowl dimensions.</li>
+                            <li><strong>Official WaterMark PDF:</strong> SAI Global Certificate WMK040285 for building certifier sign-off.</li>
+                            <li><strong>Covered Models:</strong> T3, T31, T4, T41, T5, T51, T6, T61, T7, and T71.</li>
+                        </ul>
+                    </div>
+                    <div style="display:flex; flex-direction:column; gap:0.6rem;">
+                        <a href="WaterMark-WMK040285.pdf" target="_blank" class="btn-primary" style="text-align:center;">Download WaterMark Certificate</a>
+                        <a href="T3.pdf" target="_blank" class="btn-secondary" style="text-align:center; padding:0.7rem;">Download T3 Spec Brochure</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3D Installation Video Player -->
+            <div class="video-showcase">
+                <div>
+                    <span class="section-tag" style="background:rgba(229,193,133,0.15); color:var(--champagne); border-color:var(--champagne);">Step-by-Step Visual Guide</span>
+                    <h3 style="font-size: 2.2rem; margin: 0.5rem 0 1rem; color: var(--white);">Watch the 3D Concealed Cistern & Pan Installation</h3>
+                    <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.2rem;">Walks your installer through calibrating the 320mm water outlet height, reserving the 600mm+ wall slot, positioning the power socket (50cm offset, 40–60cm height), tiling, connecting the air and foot-sensor cables, and fitting the dual-flush plate.</p>
+                </div>
+                <div>
+                    <video controls preload="metadata">
+                        <source src="Installation video insturction.mp4" type="video/mp4">
+                        Your browser does not support embedded videos.
+                    </video>
                 </div>
             </div>
         </div>
@@ -783,14 +1076,10 @@
     <!-- WATERMARK COMPLIANCE SECTION -->
     <section class="compliance-section" id="compliance">
         <div class="compliance-container">
-            <div class="compliance-text">
-                <span class="section-subtitle">Australian Building Code Compliant</span>
-                <h2>100% WaterMark Certified for Peace of Mind.</h2>
-                <p>In Australia, licensed plumbers cannot legally install uncertified smart toilets. Every Novaro suite in our schedule is officially evaluated and certified by <strong>Intertek SAI Global</strong> under the Australian Building Codes Board (ABCB) WaterMark Certification Scheme.</p>
-                <p>Builders, architects, and certifiers can download our official Certificate of Conformity and Product Schedule directly for council and plumbing sign-off.</p>
-                <div style="margin-top: 2rem;">
-                    <a href="WaterMark-WMK040285.pdf" target="_blank" class="btn-gold">Download Official Certificate (PDF)</a>
-                </div>
+            <div>
+                <span class="section-tag" style="background:rgba(52,211,153,0.15); color:var(--mint); border-color:var(--mint);">Approved for Australian Plumbing</span>
+                <h2 style="font-size: 2.8rem; margin: 0.5rem 0 1rem; color: var(--white);">100% WaterMark Certified</h2>
+                <p style="color: var(--text-light); font-size: 1.05rem;">Australian plumbers legally require WaterMark certification before installing any smart toilet. Every Novaro suite is certified by <strong>Intertek SAI Global</strong> to standard <strong>WMTS 051:2021</strong>, giving builders, plumbers, and council certifiers complete confidence.</p>
             </div>
 
             <div class="cert-card">
@@ -799,20 +1088,20 @@
                     <span>WMK040285</span>
                 </div>
                 <div class="cert-row">
-                    <span>Evaluated Standard</span>
-                    <span>WMTS 051:2021 (Bidet douche seats)</span>
+                    <span>Australian Standard</span>
+                    <span>WMTS 051:2021</span>
                 </div>
                 <div class="cert-row">
                     <span>Certifying Body</span>
-                    <span>Intertek SAI Global (JAS-ANZ Accredited)</span>
+                    <span>Intertek SAI Global</span>
                 </div>
                 <div class="cert-row">
-                    <span>Endorsed Models</span>
+                    <span>Approved Models</span>
                     <span>T3, T31, T4, T41, T5, T51, T6, T61, T7, T71</span>
                 </div>
-                <div class="cert-row">
-                    <span>Certification Validity</span>
-                    <span>Active through 20 January 2027</span>
+                <div class="cert-row" style="border-bottom:none;">
+                    <span>Valid Until</span>
+                    <span>20 January 2027</span>
                 </div>
             </div>
         </div>
@@ -821,22 +1110,22 @@
     <!-- CONTACT & FORMSPREE SECTION -->
     <section class="contact-section" id="inquire">
         <div class="section-header">
-            <span class="section-subtitle">Direct Inquiries & Wholesale</span>
-            <h2>Request Pricing or Spec Sheets</h2>
-            <p style="color: var(--text-muted);">Complete the form below for single-unit retail orders, commercial builder trade rates, or installation documentation.</p>
+            <span class="section-tag">Trade & Direct Sales</span>
+            <h2>Get Builder Pricing or Order a Suite</h2>
+            <p style="color: var(--text-muted);">Need trade rates for an upcoming build, or ordering a single unit for your home? Send us your details below and we will reply promptly.</p>
         </div>
 
         <div class="form-card">
-            <!-- REPLACE "YOUR_FORMSPREE_ID" BELOW WITH YOUR ACTUAL FORMSPREE CODE -->
+            <!-- REPLACE "YOUR_FORMSPREE_ID" WITH YOUR ACTUAL FORMSPREE CODE -->
             <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                 <div class="form-grid">
                     <div class="form-group">
-                        <label for="name">Full Name *</label>
+                        <label for="name">Your Name *</label>
                         <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                     </div>
                     <div class="form-group">
-                        <label for="company">Company / Builder Name</label>
-                        <input type="text" id="company" name="company" placeholder="Optional for private buyers">
+                        <label for="company">Builder / Company Name</label>
+                        <input type="text" id="company" name="company" placeholder="Optional for homeowners">
                     </div>
                     <div class="form-group">
                         <label for="email">Email Address *</label>
@@ -847,30 +1136,30 @@
                         <input type="tel" id="phone" name="phone" placeholder="0400 000 000" required>
                     </div>
                     <div class="form-group">
-                        <label for="model">Model of Interest</label>
+                        <label for="model">Model & Tank Preference</label>
                         <select id="model" name="model">
-                            <option value="T31-Advanced">Novaro T31 (Advanced Version - Radar & UV)</option>
+                            <option value="T31-Advanced">Novaro T31 (Advanced - Radar, UV & App)</option>
                             <option value="T3-Basic">Novaro T3 (Basic Version)</option>
+                            <option value="Bulk-Developer">Commercial Builder Multi-Unit Order</option>
                             <option value="Future-Series">Upcoming Series (T4 / T5 / T6 / T7)</option>
-                            <option value="Bulk-Commercial">Multi-Unit Commercial Package</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="finish">Preferred Colour & Quantity</label>
-                        <input type="text" id="finish" name="finish" placeholder="e.g., 2x Alpine White, 1x Matte Black">
+                        <label for="finish">Colour & Quantity</label>
+                        <input type="text" id="finish" name="finish" placeholder="e.g., 4x Alpine White (High Tank)">
                     </div>
                     <div class="form-group full">
                         <label for="message">Project Details or Questions *</label>
-                        <textarea id="message" name="message" placeholder="Let us know your delivery suburb, project timeline, or if you require the installation video and CAD specs..." required></textarea>
+                        <textarea id="message" name="message" placeholder="Tell us your delivery suburb, project timeline, or any questions about installation..." required></textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn-gold" style="width: 100%; font-size: 1rem;">Submit Inquiry</button>
+                <button type="submit" class="btn-primary" style="width: 100%; font-size: 1rem;">Send Inquiry</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 <strong>NOVARO</strong> Smart Bathrooms Australia. WaterMark Licence WMK040285. All rights reserved.</p>
+        <p>&copy; 2026 <strong>NOVARO</strong> Smart Bathrooms Australia • WaterMark Licence WMK040285 • All rights reserved.</p>
     </footer>
 
     <script>
